@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --color-dark-styling: rgba(107, 28, 194, 255);
+  --color-light-styling: rgba(136, 72, 206, 255);
+  --color-dark-text: rgba(115, 40, 198, 255);
+  --color-light: #8f8f8f;
+  --color-very-light: #bca9d3;
+  --font-heading: "Montserrat", sans-serif;
+  --font-text: "Source Sans Pro", sans-serif;
+}
+
+main {
+  width: 390px;
+  margin: 0 auto;
+  background-color: #fbfafa;
+}
+
+h1 {
+  color: white;
+  font-size: 16px;
+  font-family: var(--font-heading);
+}
+
+h2 {
+  color: var(--color-dark-styling);
+  font-family: var(--font-heading);
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-family: var(--font-heading);
+  color: var(--color-light);
+  font-size: 14px;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  color: var(--color-light);
+  font-size: 16px;
+}
+
+.nav-triangle {
+  background: linear-gradient(
+    180deg,
+    rgba(107, 28, 194, 255) 0%,
+    rgba(107, 28, 194, 255) calc(100% - 7px),
+    rgba(136, 72, 206, 255) calc(100% - 7px),
+    rgba(136, 72, 206, 255) 100%
+  );
+
+  background-color: var(--color-dark-styling);
+  height: 81px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 326px;
+  margin: 0 auto;
+  height: 81px;
+}
+
+span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.triangle {
+  background-color: var(--color-dark-styling);
+  height: 12px;
+  border-bottom: 8px;
+  border-color: var(--color-light-styling);
+}
+
+.search,
+.search-result {
+  width: 326px;
+  margin: 0 auto;
+}
+
+.search-inputs-container {
+  display: grid;
+  grid-template-columns: 180px 130px;
+  column-gap: 16px;
+  row-gap: 16px;
+  padding-bottom: 28px;
+  margin-top: 18px;
+}
+
+#name-search,
+#name-search:active {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  appearance: none;
+  border: 2px solid var(--color-dark-styling);
+  position: absolute;
+  width: 326px;
+  height: 34px;
+}
+
+::placeholder {
+  color: var(--color-very-light);
+  padding-left: 10px;
+  font-family: var(--font-text);
+  font-size: 16px;
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-light-styling);
+  position: relative;
+  left: 280px;
+  box-sizing: content-box;
+  padding: 10px;
+}
+
+.drop-down {
+  grid-row-start: 2;
+}
+
+.drop-down-button-class {
+  height: 38px;
+  width: 182px;
+  background-color: white;
+  color: var(--color-dark-text);
+  border: 2px solid var(--color-dark-styling);
+  font-size: 14px;
+  font-family: var(--font-text);
+  font-weight: 600;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drop-down-button-full-time {
+  height: 38px;
+  width: 130px;
+  background-color: white;
+  color: var(--color-dark-text);
+  border: 2px solid var(--color-dark-styling);
+  font-size: 14px;
+  font-family: var(--font-text);
+  font-weight: 600;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selection {
+  padding-left: 15px;
+  padding-top: 4px;
+}
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  color: white;
+  background-color: var(--color-light-styling);
+  box-sizing: content-box;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.profile-container + .profile-container {
+  margin-top: 16px;
+}
+
+.profile-container {
+  padding: 14px;
+  box-shadow: 3px 3px var(--color-dark-styling);
+  border-radius: 1px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 39px 1fr;
+  column-gap: 20px;
+}
+
+p {
+  margin: 0;
+  color: var(--color-dark-text);
+  align-self: self-end;
+  font-family: var(--font-text);
+  font-weight: 600;
+}
+
+a {
+  color: var(--color-light-styling);
+  font-size: 12px;
+  font-family: var(--font-text);
+  font-weight: 600;
+  text-underline-offset: 2px;
+}
+
+.profile-picture {
+  box-sizing: content-box;
+  background-color: var(--color-light-styling);
+  color: white;
+  width: 17px;
+  height: 17px;
+  border: 11px solid var(--color-light-styling);
+  border-radius: 4px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.profile-container {
+  border: 2px solid var(--color-dark-styling);
+}
