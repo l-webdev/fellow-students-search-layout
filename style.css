@@ -15,8 +15,13 @@
   --font-text: "Source Sans Pro", sans-serif;
 }
 
+body {
+  margin: 0 auto;
+}
+
 main {
   width: 390px;
+  height: 846px;
   margin: 0 auto;
   background-color: #fbfafa;
 }
@@ -47,25 +52,38 @@ h3 {
   font-size: 16px;
 }
 
-.nav-triangle {
-  background: linear-gradient(
-    180deg,
-    rgba(107, 28, 194, 255) 0%,
-    rgba(107, 28, 194, 255) calc(100% - 7px),
-    rgba(136, 72, 206, 255) calc(100% - 7px),
-    rgba(136, 72, 206, 255) 100%
-  );
+.nav-background {
+  position: relative;
+  padding: 32px;
+  margin-bottom: 65px;
+}
 
-  background-color: var(--color-dark-styling);
-  height: 81px;
+.nav-background-dark {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+.nav-background-light {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  z-index: 0;
+}
+
+.nav-over-background {
+  position: absolute;
+  top: 16px;
+  z-index: 1;
 }
 
 .nav-container {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 326px;
-  margin: 0 auto;
   height: 81px;
 }
 
@@ -78,13 +96,6 @@ span {
   background: white;
   border-radius: 3px;
   z-index: 1;
-}
-
-.triangle {
-  background-color: var(--color-dark-styling);
-  height: 12px;
-  border-bottom: 8px;
-  border-color: var(--color-light-styling);
 }
 
 .search,
